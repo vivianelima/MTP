@@ -7,7 +7,7 @@ int main()
 
     printf("Entre com 10 numeros: \n");
     for(i = 0; i < 10; i++)
-        scanf("%d\n", &vet[i]);
+        scanf("%d", &vet[i]);
 
     for(i = 0; i < 10; i++)
         {
@@ -17,7 +17,7 @@ int main()
 
     printf("O novo vetor eh:");
     for(i = 0; i < 10; i++)
-        printf("\n%d\n", vet2[i]);
+        printf("\n%d ", vet[i]);
 
     return 0;
 }
