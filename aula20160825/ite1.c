@@ -1,12 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int numero, i , fatorial;
+    int numero, i , fat;
     printf("Entre com um numero: ");
     scanf("%d", &numero);
-    fatorial = 1;
+    fat = 1;
+    
     for(i = 1; i <= numero; i++)
-        fatorial = fatorial*i;
-    printf("O fatorial de %d e igual %d.\n", numero, fatorial);
+    	{
+    		fat = fat*i;
+		}
+        
+        
+    printf("O fatorial de %d e igual %d.\n", numero, fat);
     return 0;
 }

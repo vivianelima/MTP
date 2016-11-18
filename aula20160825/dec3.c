@@ -5,6 +5,7 @@ int main()
 {
 	int i, soma=0, dado;
 	srand(time(0));
+	
 	for(i= 0; i < 3; i++)
 	{
 		dado = rand()%6+1;
@@ -13,10 +14,11 @@ int main()
 		 soma = soma + dado;
 	}
 	printf("Soma = %d", soma);
+	
 	if(soma == 7 ||soma == 11)
-		printf("\nVoce ganhou");
+		printf("\nVoce ganhou!!!");
 	else
-		printf("\nVoce perdeu");
+		printf("\nVoce perdeu!!!");
 
 return 0;
 }

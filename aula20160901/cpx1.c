@@ -4,21 +4,21 @@
 int main()
 {
     double complex Z1, Z2, soma, prod;
-    double preal, pimag;
+    double parte_real, parte_imag;
 
     printf("Entre com a parte real de Z1: ");
-    scanf("%lf", &preal);
+    scanf("%lf", &parte_real);
     printf("Entre com a parte imaginaria de Z1: ");
-    scanf("%lf", &pimag);
+    scanf("%lf", &parte_imag);
 
-    Z1 = preal + pimag*I;
+    Z1 = parte_real + parte_imag*I;
 
     printf("Entre com a parte real de Z2: ");
-    scanf("%lf", &preal);
+    scanf("%lf", &parte_real);
     printf("Entre com a parte imaginaria de Z2: ");
-    scanf("%lf", &pimag);
+    scanf("%lf", &parte_imag);
 
-    Z2 = preal + pimag*I;
+    Z2 = parte_real + parte_imag*I;
 
     soma = Z1 + Z2;
     prod = Z1*Z2;

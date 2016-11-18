@@ -3,7 +3,7 @@
 
 int main()
 {
-    double complex Z1, Z2, prod, conjug;
+    double complex Z1, Z2, produto, conjug;
     double preal, pimag;
 
     printf("Entre com a parte real de Z: ");
@@ -12,8 +12,8 @@ int main()
     scanf("%lf", &pimag);
 
     Z1 = preal + pimag*I;
-	printf("%lf", complex conj(Z1));
-	prod = Z1*Z2;
+	printf("%lf", complex conjug(Z1));
+	produto = Z1*Z2;
     printf("O conjulgado do numero e: %lf\n");
     return 0;
 }

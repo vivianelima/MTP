@@ -1,18 +1,19 @@
 #include<stdio.h>
 int main()
 {
-	int numero, i;
+	int num, i;
 	printf("Entre com um numero.\n");
-	scanf("%d",&numero);
-	for(i=2; i < numero; i++)
+	scanf("%d",&num);
+	
+	for(i=2; i < num; i++)
 	{
-		if(numero%i==0)
+		if(num % i == 0)
 		{
 			printf("Nao e primo!\n");
 			break;
 		}
 	}
-	if(i == numero)
+	if(i == num)
 	printf("Primo!!!!\n");
 	return 0;
 }

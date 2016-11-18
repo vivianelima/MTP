@@ -2,24 +2,24 @@
 #include <time.h>
 int main()
 {
-	int numero, i, aleatorio, cont = 0;
+	int num, i, aleat, cont = 0;
 	srand(time(0));
-	aleatorio = rand()%100;
+	aleat = rand()%100;
 		
 	do
 	{
 		printf("Entre com um numero qualquer.\n");
-		scanf("%d",&numero);
+		scanf("%d",&num);
 		
-		if (numero < aleatorio)
+		if (num < aleat)
 		printf("BAIXO\n");
 		
-		if (numero > aleatorio)
+		if (num > aleat)
 		printf("ALTO\n");
 		
 		cont ++;
 	
-	}while(numero != aleatorio);
+	}while(num != aleat);
 		
 	printf("\n\nACERTOU!!!!\n");
 	printf("Voce fez ao total %d tentativas", cont);

@@ -2,15 +2,21 @@
 int main()
 {
 
-    float A, B, C, nota;
+    float A, B, C, Nota;
     printf("Escreva as tres notas do aluno:\n");
-    printf("Nota A: ");
+    
+    printf("Nota 1: ");
     scanf("%f", &A);
-    printf("\nNota B: ");
+    
+    printf("\nNota 2: ");
     scanf("%f", &B);
-    printf("\nNota C: ");
+    
+    printf("\nNota 3: ");
     scanf("%f", &C);
-    nota = ((A*2)+(B*3)+(C*5))/10;
-    printf("\n A nota do aluno e: %.1f", nota);
+    
+    Nota = ((A*2)+(B*3)+(C*5))/10;
+    
+    printf("\n A nota do aluno e: %.1f", Nota);
+    
     return 0;
 }
