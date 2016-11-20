@@ -2,18 +2,18 @@
 #include <math.h>
 int main()
 {
-    float l1,l2;
+    float lad1,lad2;
     double angulo, lado;
 
     printf("Informe o primeiro lado do triangulo: ");
-    scanf("%g", &l1);
+    scanf("%g", &lad1);
     printf("Informe o segundo lado do triangulo: ");
-    scanf("%g", &l2);
+    scanf("%g", &lad2);
 
     printf("Agora informe o angulo formado entre eles:");
     scanf("%lf", &angulo);
 
-    lado = sqrt(pow(l1,2)+pow(l2,2)- 2*l1*l2*cos(angulo));
+    lado = sqrt(pow(lad1,2)+pow(lad2,2)- 2*lad1*lad2*cos(angulo));
 
     printf("\nO terceiro lado eh: %lf\n", lado);
 

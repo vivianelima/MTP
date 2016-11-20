@@ -4,18 +4,18 @@
 int main()
 {
     char frase[256];
-    char olheiro;
+    char observador;
     int indice = 0, cont = 0;
     printf("Degite uma frase:\n");
     gets(frase);
-    olheiro = frase[indice];
-    while(olheiro != '\0')
+    observador = frase[indice];
+    while(observador != '\0')
     {
 
-        if(frase[indice] = isalpha(olheiro) )
+        if(frase[indice] = isalpha(observador) )
             cont ++;
         indice ++;
-        olheiro = frase[indice];
+        observador = frase[indice];
     }
     printf("A frase tem: %d letras", cont);
 

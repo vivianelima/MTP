@@ -4,16 +4,16 @@
 int main()
 {
     char frase[256];
-    char olheiro;
+    char cont;
     int indice = 0;
     printf("Degite uma frase:\n");
     gets(frase);
-    olheiro = frase[indice];
-    while(olheiro != '\0')
+    cont = frase[indice];
+    while(cont != '\0')
     {
-        frase[indice]= tolower(olheiro);
+        frase[indice]= tolower(cont);
         indice++;
-        olheiro = frase[indice];
+        cont = frase[indice];
     }
     printf("a nova frase eh:\n");
     printf("%s\n", frase);

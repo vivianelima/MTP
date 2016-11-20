@@ -3,23 +3,23 @@
 
 int main()
 {
-    double P1_x, P1_y, P2_x, P2_y, distancia;
+    double PA_x, PA_y, PB_x, PB_y, distan;
 
     printf("Entre com X de P1: ");
-    scanf("%lf", &P1_x);
+    scanf("%lf", &PA_x);
 
     printf("Entre com Y de P1: ");
-    scanf("%lf", &P1_y);
+    scanf("%lf", &PA_y);
 
     printf("Entre com X de P2: ");
-    scanf("%lf", &P2_x);
+    scanf("%lf", &PB_x);
 
     printf("Entre com Y de P2: ");
-    scanf("%lf", &P2_y);
+    scanf("%lf", &PB_y);
 
-    distancia = sqrt(pow(P2_x - P1_x,2.)+ pow(P2_y - P1_y,2.));
+    distan = sqrt(pow(PB_x - PA_x,2.)+ pow(PB_y - PA_y,2.));
 
-    printf("A distancia entre os pontos eh %lf\n", distancia);
+    printf("A distancia entre os pontos eh %lf\n", distan);
 
     return 0;
 }
