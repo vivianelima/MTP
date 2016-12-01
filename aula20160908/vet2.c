@@ -3,21 +3,26 @@
 
 int main()
 {
-    int i, j = 10, vet[10], vet2[10];
+    int i, j = 10, vetor[10], vetor2[10];
 
-    printf("Entre com 10 numeros: \n");
+    printf("\nEntre com 10 numeros:\n");
+    
     for(i = 0; i < 10; i++)
-        scanf("%d", &vet[i]);
+        scanf("%d",&vetor[i]);
 
-    for(i = 0; i < 10; i++)
+    for(i=0; i < 10; i++)
         {
-            vet2[j] = vet[i];
+            vetor2[j] = vetor[i];
             j--;
         }
 
-    printf("O novo vetor eh:");
-    for(i = 0; i < 10; i++)
-        printf("\n%d ", vet[i]);
+    printf("\nO novo vetor eh: "); 
+    
+    for(i = 1; i <= 10; i++)
+        printf("\n%d", vetor2[i]);
+    
+    
+
 
     return 0;
 }

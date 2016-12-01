@@ -37,14 +37,18 @@ typedef enum {
   FLOAT = 3 
 } tipos_aceitos;
 
-typedef struct {
-  tipos_aceitos tipo;
-  union { 
-    int i; 
-    char s[NCHAR]; 
-    float f; 
-  } dado;
-} VAR_t;
+typedef struct
+ {
+  	tipos_aceitos tipo;
+  	
+  union
+   { 
+   	 	int i; 
+    	char s[NCHAR]; 
+    	float f; 
+	} 	dado;
+	
+  } VAR_t;
 
 inline void pgetchar(char * character) {
   // Getchar "protegido", recebe apenas um 
@@ -57,25 +61,28 @@ inline void pgetchar(char * character) {
 int main() {
   char opcao;
   VAR_t meuDado;
-  do {
-    printf("%s %s", "Qual o tipo de dado a armazenar?",
+  do
+   {
+  	   printf("%s %s", "Qual o tipo de dado a armazenar?",
 	   "(I)nteiro, (S)tring ou (R)eal: ");
-    pgetchar(&opcao);
-    opcao = toupper(opcao);
-  } while(opcao != 'I' && opcao != 'S' && opcao != 'R');
+    	pgetchar(&opcao);
+    	opcao = toupper(opcao);
+ 	} while(opcao != 'I' && opcao != 'S' && opcao != 'R');
+  
   printf("Entre com o dado ");
-  switch(opcao) {
-  case 'I':
-    printf("inteiro: ");
-    RECEBE_INTEIRO(meuDado);
-    break;
-  case 'S':
-    printf("string: ");
-    RECEBE_STRING(meuDado);
-    break;
-  case 'R':
-    printf("real: ");
-    RECEBE_REAL(meuDado);
+  switch(opcao) 
+  {
+ 	case 'I':
+   	 printf("inteiro: ");
+   	 RECEBE_INTEIRO(meuDado);
+    	break;
+  	case 'S':
+   	 printf("string: ");
+   	 RECEBE_STRING(meuDado);
+   		 break;
+  	case 'R':
+    	printf("real: ");
+   		 RECEBE_REAL(meuDado);
   }
   printf("Você armazenou a seguinte informação:\n");
   MOSTRA_DADO(meuDado);

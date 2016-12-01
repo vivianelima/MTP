@@ -26,9 +26,9 @@ int main()
 	{
 		printf("\nBanca: %c %c\n", mostra_carta(carta1), mostra_carta(carta2));
 		if(soma > carta1 + carta2)
-			printf("Voce ganhou");
+			printf("Voce ganhou!!! :D");
 		else
-			printf("voce perdeu!\n");
+			printf("voce perdeu!!! :(\n");
 	}
 	return 0;
 }

@@ -8,7 +8,7 @@ int main()
 {
 	srand(time(0));
 	int i , soma=0, tentativa = 0;
-	printf("Inicio de jogo!!!\n\n\n");
+	printf("..::Inicio de jogo::..\n\n\n");
 	do{
 		soma = 0;
 		for (i = 0; i < 5; i++)

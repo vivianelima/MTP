@@ -31,11 +31,14 @@ int main()
 {
     struct ponto pA, pB, s;
     float distancia;
-    RECEBE("pA", pA);
+    
+    RECEBE("pA",pA);
     RECEBE("pB",pB);
     SOMA(pA,pB,s);
     MOSTRA(s);
+    
     distancia = DISTANCIA(pA,pB);
-    printf("A distncia entre eles: %g\n", distancia);
+    printf("\nA distancia entre eles eh: %g\n", distancia);
+    
     return 0;
 }

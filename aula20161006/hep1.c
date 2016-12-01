@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-void recebeVetor( float * vetor, int qtde);
+void recebe_Vetor( float * vetor, int qtde);
 float media(float * vetor, int qtde);
-float desviopadrao(float * vetor, int qtde);
+float desvio_padrao(float * vetor, int qtde);
 int main()
 {
 	int qtde;
@@ -12,14 +12,14 @@ int main()
 	printf("Entre com a quantidade de elementos: ");
 	scanf("%d", &qtde);
 	vetor = (float *) calloc(qtde, sizeof(float));
-	recebeVetor(vetor, qtde);
-	printf("Media: %g; Devio-padrao: %g\n", media(vetor,qtde), desviopadrao(vetor,qtde));
+	recebe_Vetor(vetor, qtde);
+	printf("Media: %g; Devio-padrao: %g\n", media(vetor,qtde), desvio_padrao(vetor,qtde));
 	free(vetor);
 	return 0;
 	
 }
 
-void recebeVetor( float * vetor, int qtde)
+void recebe_Vetor( float * vetor, int qtde)
 {
 	int i;
 	for( i = 0; i < qtde; i++)
@@ -38,7 +38,7 @@ float media(float * vetor, int qtde)
 	return soma/qtde;
 }
 
-float desviopadrao(float * vetor, int qtde)
+float desvio_padrao(float * vetor, int qtde)
 {
 	float soma = 0;
 	float m = media(vetor,qtde);

@@ -1,24 +1,25 @@
 #include <stdio.h>
-int primo(int numero);
+int primo(int num);
 int main()
 {
-	int numero, i;
+	int num, i;
 	printf("Entre com um numero: ");
-	scanf("%d", &numero);
-	for(i = 1 ; i <= numero/2; i++)
-		if	(primo(i) && primo(numero - i))	
-			printf("%d + %d\n", i , numero- i);
+	scanf("%d", &num);
+	
+	for(i = 1 ; i <= num/2; i++)
+		if	(primo(i) && primo(num - i))	
+				printf("%d + %d\n", i , num- i);
 	return 0;
 }
 
-int primo(int numero)
+int primo(int num)
 {
-	int i, checa = 1;
-	for( i = 2; i <= numero/2; i ++)
-		if(numero%i == 0)
+	int i, checador = 1;
+	for( i = 2; i <= num/2; i ++)
+		if(num%i == 0)
 			{
-				checa = 0;
+				checador = 0;
 				break;
 			}
-		return (numero <= 1)? 0 : checa;
+		return (num <= 1)? 0 : checador;
 }

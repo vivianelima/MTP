@@ -3,7 +3,7 @@
 #include <string.h>
 char * iniciaTexto();
 char * recebeTexto();
-void gravaTexto(char * texto, int tamanho);
+void gravaTexto(char * texto, int tam);
 int main() {
     char * texto;
     printf("::: Inicio (para sair, tecle #,ENTER) :::::::::::\n");
@@ -23,16 +23,16 @@ char * iniciaTexto() {
 char * recebeTexto() {
     char * texto = iniciaTexto();
     char * aux;
-    int c, tamanho = 0;
+    int c, tam= 0;
     do {
         c = getchar();
         if(c != '#') {
-            aux = (char *) realloc(texto, tamanho+2);
+            aux = (char *) realloc(texto, tam+2);
             if(aux != NULL) {
                 texto = aux;
-                texto[tamanho] = c;
-                tamanho++;
-                texto[tamanho] = '\0';
+                texto[tam] = c;
+                tam++;
+                texto[tam] = '\0';
             }
             else printf("\n** Erro! Sem memoria! **\n");
         }
@@ -40,7 +40,7 @@ char * recebeTexto() {
     return texto;
 }
 
-void gravaTexto(char * texto, int tamanho)
+void gravaTexto(char * texto, int tam)
 {
 	int i;
 	FILE * arquivo;
@@ -49,7 +49,7 @@ void gravaTexto(char * texto, int tamanho)
 		fprintf(stderr,"Erro na gravacao!\n");
 	else
 	{
-		for(i=0; i < tamanho; i++)
+		for(i=0; i < tam; i++)
 		fputc(texto[i],arquivo);
 		fclose(arquivo);
 	}

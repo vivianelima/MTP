@@ -2,7 +2,7 @@
 
 struct Divisao {
 	int quociente;
-	int resto;
+	int rest;
 };
 
 struct Divisao divisao(int dividendo, int divisor);
@@ -15,13 +15,13 @@ int main() {
 	printf("Entre com o divisor: ");
 	scanf("%d",&divisor);
 	resposta = divisao(dividendo, divisor);
-	printf("Quociente: %d; Resto: %d\n", resposta.quociente, resposta.resto);
+	printf("Quociente: %d; Resto: %d\n", resposta.quociente, resposta.rest);
 	return 0;
 }
 
 struct Divisao divisao(int dividendo, int divisor) {
 	struct Divisao resposta;
 	resposta.quociente = dividendo / divisor;
-	resposta.resto = dividendo % divisor;
+	resposta.rest = dividendo % divisor;
 	return resposta;
 }

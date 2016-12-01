@@ -4,7 +4,7 @@
 
 
 float media(float  vetor[], int qtde);
-float desviopadrao(float  vetor[], int qtde);
+float desvio_padrao(float  vetor[], int qtde);
 int main()
 {
 	int qtde= 5;
@@ -16,7 +16,7 @@ int main()
 		scanf("%f", &vetor[i]);
 	}
 	
-	printf("Media: %.3f; Devio-padrao: %.3f\n", media(vetor,qtde), desviopadrao(vetor,qtde));
+	printf("Media: %.3f; Devio-padrao: %.3f\n", media(vetor,qtde), desvio_padrao(vetor,qtde));
 	
 	return 0;
 	
@@ -31,7 +31,7 @@ float media(float vetor[], int qtde)
 	return soma/qtde;
 }
 
-float desviopadrao(float vetor[], int qtde)
+float desvio_padrao(float vetor[], int qtde)
 {
 	float soma = 0;
 	float m = media(vetor,qtde);

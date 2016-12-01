@@ -3,16 +3,18 @@
 #include <string.h>
 
 char * iniciaTexto();
-void recebeTexto(char ** texto);
+void recebe_Texto(char ** texto);
 
 int main()
 {
 	char * texto = iniciaTexto();  //printf("Tamanho da string: %d\n", strlen(texto));
 	printf("::: Inicio :::\n");
-	recebeTexto(&texto);
+	recebe_Texto(&texto);
+	
 	printf("::: Voce escreveu: :::\n");
 	printf("%s\n",texto);
 	printf("\nTamanho da string: %d\n", strlen(texto));
+	
 	return 0;
 }
 
@@ -23,7 +25,7 @@ char * iniciaTexto()
 	return texto;
 }
 
-void recebeTexto(char ** texto)
+void recebe_Texto(char ** texto)
 {
 	char *aux;
 	int c, tamanho=0;

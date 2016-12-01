@@ -4,7 +4,8 @@ void par();
 int main()
 {
 	int escolha;
-	printf("Quais numeros voce deseja ver? Digite 1 ver para impares e 2 para pares\n");
+	printf("Quais numeros voce deseja ver?");
+	printf("\nDigite 1 ver para impares e 2 para pares\n");
 	scanf("%d", &escolha);
 	switch(escolha)
 	{

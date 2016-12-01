@@ -9,10 +9,12 @@ int main()
 {
 	bool V = true;
 	bool F = false;
+	
 	MOSTRA(V ==F);
 	MOSTRA (V != F);
 	MOSTRA(V && F);
 	MOSTRA (V || F);
 	MOSTRA(2>3);
+	
 	return 0;
 }

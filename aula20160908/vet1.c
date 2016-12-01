@@ -5,17 +5,20 @@
 int main()
 {
     srand(time(0));
-    unsigned int numero;
-    float soma = 0.0f, media, aleatorios [N];
+    unsigned int num;
+    float soma = 0.0f, media, aleat [N];
     int i;
-    printf("Entre com um numero inteiro nao negativo: ");
-    scanf("%u", &numero);
+    printf("\nEntre com um numero inteiro nao negativo: ");
+    scanf("%u", &num);
 
     for( i = 0; i < N; i ++)
-        aleatorios[i] = rand()%numero +1;
+        aleat[i] = rand()%num +1;
+        
     for( i = 0; i < N; i ++)
-        soma = soma + aleatorios[i];
+        soma = soma + aleat[i];
+        
     media = soma/N;
     printf("A media eh: %f\n", media);
+    
     return 0;
 }

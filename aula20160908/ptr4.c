@@ -1,17 +1,17 @@
 #include <stdio.h>
 int main()
 {
- double numA, numB;
+ double numeroA, numeroB;
  double soma;
  printf("Digite dois numeros reais: \n");
- scanf("%lf", &numA);
- scanf("%lf", &numB);
+ scanf("%lf", &numeroA);
+ scanf("%lf", &numeroB);
 
  //unsigned char *ponteiro= NULL;
- printf("\n%p : %lf\n", &numA, numA);
- printf("\n%p : %lf\n", &numB, numB);
+ printf("\n%p : %lf\n", &numeroA, numeroA);
+ printf("\n%p : %lf\n", &numeroB, numeroB);
 
- soma = numA + numB;
+ soma = numeroA + numeroB;
  printf("\n%p : %lf\n", &soma, soma);
  return 0;
 }

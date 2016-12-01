@@ -3,7 +3,9 @@
 #define N 2
 #define M 4
 
-void imprimeMatriz(float matriz[N][M]);
+void imprime_Matriz(float matriz[N][M]);
+void imprime_Transposta(float matriz[N][M]);
+
 int main()
 {
 	float matriz [N][M];
@@ -15,13 +17,13 @@ int main()
 				scanf("%f", &matriz[i][j]);
 				
 			}
-	imprimeMatriz(matriz);	
+	imprime_Matriz(matriz);	
 	printf("\nA transposta e: \n");	
-	imprimeTransposta(matriz);	
+	imprime_Transposta(matriz);	
 	return 0;
 }
 
-void imprimeMatriz(float matriz[N][M])
+void imprime_Matriz(float matriz[N][M])
 {
 	int i, j;
 	for(i = 0; i < N; i++)
@@ -29,7 +31,7 @@ void imprimeMatriz(float matriz[N][M])
 			printf("%g%c", matriz[i][j], (j== M-1)? '\n': '\t');
 }
 
-void imprimeTransposta(float matriz[N][M])
+void imprime_Transposta(float matriz[N][M])
 {
 	int i, j;
 	for(j = 0; j < M; j++)

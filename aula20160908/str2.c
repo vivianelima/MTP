@@ -7,12 +7,15 @@ int main()
     char frase[256];
     printf("Entre com uma frase: ");
     gets(frase);
-    printf("\n\n..::: PALAVRA ESCONDIDA:::..\n\n");
+    
+    printf("\n\n**** PALAVRA ESCONDIDA ****\n\n");
+    
     printf("%c", frase[0]);
+    
     for(i = 0; frase[i] != '\0'; i++)
-    {
-		if(frase[i]== ' ')
-        printf("%c", frase[i+1]);
-	}
+  	  	{
+			if(frase[i]== ' ')
+      	 	printf("%c", frase[i+1]);
+		}
     return 0;
 }

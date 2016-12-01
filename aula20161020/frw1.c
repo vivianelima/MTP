@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 #define NCHAR 256
-void gravarDados();
+void gravar_Dados();
 void lerDados();
 int main()
 {
 	int opcao;
 	do
 	{
-		printf("1- Escrever informacoes\n");
-		printf("2- Ler informacoes\n");
-		printf("0- Sair\n");
+		printf("1- Escrever informacoes!\n");
+		printf("2- Ler informacoes!\n");
+		printf("0- Sair1\n");
 		scanf("%d", &opcao); 
 		getchar(); // consumir o enter
 		if(opcao==1)
-			gravarDados();
+			gravar_Dados();
 		if(opcao==2)
 			lerDados();
 	}
@@ -22,7 +22,7 @@ int main()
 	return 0;
 }
 
-void gravarDados()
+void gravar_Dados()
 {
 	FILE * arquivo;
 	char nome[NCHAR];
@@ -44,7 +44,7 @@ void lerDados()
 	FILE * arquivo;
 	char nome[NCHAR];
 	int idade;
-	float altura; // em metros
+	float Altura; // em metros
 	arquivo = fopen("info.txt", "r");
 	if(arquivo==NULL)
 		fprintf(stderr, "Arquivo nao existente!!!\n");
@@ -52,13 +52,13 @@ void lerDados()
 	{
 	
 	fgets(nome, NCHAR ,arquivo); nome[strlen(nome)-1]= '\0'; // esclui ENTER
-	fscanf(arquivo,"%d\n%f\n", &idade, &altura);
+	fscanf(arquivo,"%d\n%f\n", &idade, &Altura);
 	fclose(arquivo);
 	printf("Nome: ");
 	fprintf(stdout, "%s\n", nome);
 	printf("Idade: ");
 	fprintf(stdout, "%d\n", idade);
 	printf("Atura em metros: ");
-	fprintf(stdout, "%g\n", altura);
+	fprintf(stdout, "%g\n", Altura);
 	}		
 }

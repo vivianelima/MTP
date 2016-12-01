@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-void recebeMatriz(float **matriz, int N, int M);
-void imprimeMatriz(float **matriz, int N, int M);
-void imprimeTransposta(float **matriz, int N, int M);
+void recebe_Matriz(float **matriz, int N, int M);
+void imprime_Matriz(float **matriz, int N, int M);
+void imprime_Transposta(float **matriz, int N, int M);
 int main()
 {
 	int qtde;
@@ -18,10 +18,10 @@ int main()
 		matriz[i]= (float*)calloc(M, sizeof(float));
 	
 	}
-	recebeMatriz(matriz,  N,  M);
-	imprimeMatriz(matriz, N, M);
+	recebe_Matriz(matriz,  N,  M);
+	imprime_Matriz(matriz, N, M);
 	printf("\n\n");
-	imprimeTransposta(matriz, N, M);
+	imprime_Transposta(matriz, N, M);
 	for(i =0; i < N; i++)
 		free(matriz[i]);
 	free(matriz);
@@ -29,7 +29,7 @@ int main()
 	
 }
 
-void recebeMatriz(float **matriz, int N, int M)
+void recebe_Matriz(float **matriz, int N, int M)
 
 {
 	int i, j;
@@ -41,7 +41,7 @@ void recebeMatriz(float **matriz, int N, int M)
 				
 			}
 }
-void imprimeMatriz(float **matriz, int N, int M)
+void imprime_Matriz(float **matriz, int N, int M)
 {
 	int i, j;
 	for(i = 0; i < N; i++)
@@ -49,7 +49,7 @@ void imprimeMatriz(float **matriz, int N, int M)
 			printf("%g%c", matriz[i][j], (j== M-1)? '\n': '\t');
 }
 
-void imprimeTransposta(float **matriz, int N, int M)
+void imprime_Transposta(float **matriz, int N, int M)
 {
 	int i, j;
 	for(j = 0; j < M; j++)

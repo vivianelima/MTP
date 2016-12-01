@@ -3,20 +3,24 @@
 
 int main()
 {
-    int i, vet[10], soma = 0, prod = 1;
+    int i, vetor[10], soma = 0, prod = 1;
 
-    printf("Entre com 10 numeros: \n");
-    for(i = 0; i < 10; i++)
-        scanf("%d\n", &vet[i]);
+    printf("Entre com 10 numeros:\n");
+   	for(i=0;i<10;i++)
+   		scanf("%d\n",&vetor[i]);
 
-    for( i = 0; i < 10; i ++)
-        soma = soma + vet[i];
+    for(i = 0; i < 10; i ++)
+        soma = soma + vetor[i];
 
-    for( i = 0; i < 10; i ++)
-        prod = prod * vet[i];
+    for(i = 0; i < 10; i ++)
+        prod = prod * vetor[i];
 
     printf("\nA soma eh: %d\n", soma);
-    printf("O produto eh: %d\n", prod);
+    printf("\nO produto eh: %d\n", prod);
+    
+    for(i = 0; i < 10; i++)
+        printf("%d\n",vetor[i]);
+
 
     return 0;
 }

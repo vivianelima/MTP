@@ -11,9 +11,11 @@ int main() {
 	return 0;
 }
 
-void inverte(char *frase, int n) {
-	if(frase[n] != '\0') {
-		inverte(frase, n+1);
-		printf("%c", frase[n]);
+void inverte(char *frase, int n)
+	{
+		if(frase[n] != '\0')
+			{
+				inverte(frase, n+1);
+				printf("%c", frase[n]);
+			}
 	}
-}
